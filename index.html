@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛍️ 룰루비통 (Lulubuiton) - 공식 웹사이트 (최종본)</title>
+    <style>
+        /* =================================
+           CSS 스타일 (배경색: #f0f0f5 은은한 라벤더 그레이)
+           ================================= */
+        body {
+            font-family: 'Arial Black', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f5; /* 은은한 단색 배경색 */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .alert-banner {
+            background-color: #ff0000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 1px;
+        }
+
+        /* =================================
+           헤더 (Header)
+           ================================= */
+        header {
+            background-color: #4a0e71; /* 브랜드 강조색: 진한 보라색 */
+            color: #ffd700;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 5px;
+        }
+
+        /* =================================
+           메인 슬로건 / 배너
+           ================================= */
+        .main-slogan {
+            background-color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid #ffd700;
+        }
+
+        .main-slogan h2 {
+            font-size: 3em;
+            color: #4a0e71;
+            margin: 0;
+        }
+
+        .top-banner {
+            background-color: #ff4500;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 1.5em;
+            font-weight: 900;
+        }
+
+        /* =================================
+           주요 콘텐츠 섹션
+           ================================= */
+        .promise-section, .bestseller-section, .event-section, .disclaimer {
+            padding: 40px 50px;
+            margin-top: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            color: #4a0e71;
+            border-bottom: 3px solid #eee;
+            padding-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        .promise-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .promise-list li {
+            background-color: #f9f9f9;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-left: 5px solid #ffd700;
+        }
+
+        .promise-list strong {
+            color: #ff4500;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* =================================
+           제품 테이블 (Product Table)
+           ================================= */
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .product-table th, .product-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+
+        .product-table th {
+            background-color: #4a0e71;
+            color: white;
+            width: 30%;
+        }
+
+        .product-table td {
+            font-weight: bold;
+            background-color: #fffaf0;
+        }
+        
+        /* 모바일 테이블 최적화를 위해 data-label을 준비 */
+        @media (max-width: 600px) {
+             .product-table th, .product-table td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                text-align: center;
+             }
+             .product-table th { display: none; }
+             .product-table td:before {
+                content: attr(data-label);
+                font-weight: bold;
+                display: block;
+                color: #4a0e71;
+                margin-bottom: 5px;
+             }
+        }
+
+        .review-quote {
+            margin-top: 20px;
+            padding: 15px;
+            border-left: 5px solid #1a1a1a;
+            background-color: #f0f0f0;
+            font-style: italic;
+        }
+
+        .buy-button {
+            display: block;
+            width: 90%;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #ffd700;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.5em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .buy-button:hover {
+            background-color: #4a0e71;
+        }
+
+        .disclaimer {
+            background-color: #ffe0e0;
+            color: #cc0000;
+            font-size: 0.9em;
+            text-align: center;
+            border: 2px dashed #cc0000;
+            padding: 15px;
+            margin-bottom: 50px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #999;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="alert-banner">
+        **경고:** 이 모든것은 허구입니다
+    </div>
+
+    <header>
+        <div class="section-container">
+            <h1>🛍️ 룰루비통 (Lulubuiton)</h1>
+            <p>공식 웹사이트</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-slogan">
+            <div class="section-container">
+                <h2>
+                    "룰루비통과 함께라면, 당신의 평범한 일상도 <strong>프리미엄</strong>이 됩니다!"
+                </h2>
+            </div>
+        </div>
+
+        <section class="top-banner">
+            <div class="section-container">
+                [한정판] 빛보다 빠른 품절 예고!
+                <p style="font-size: 0.7em; font-weight: normal; margin-top: 10px;">
+                    
+                </p>
+            </div>
+        </section>
+
+        <section class="promise-section">
+            <div class="section-container">
+                <h3>🌟 룰루비통의 약속: 왜 룰루비통을 선택해야 하는가?</h3>
+                <ul class="promise-list">
+                    <li>
+                        <strong>⚡️ [시간 역행 기술]</strong>
+                        룰루비통 제품을 소지하는 순간, 착용자의 주변 시간 흐름이 매우 미세하게 느려져 마치 **시간이 멈춘 듯한 착각**을 불러일으킵니다. (과학적 근거 없음)
+                    </li>
+                    <li>
+                        <strong>🧠 [뇌파 동기화]</strong>
+                        모든 룰루비통 가죽 제품에는 **첨단 나노 칩**이 내장되어 있어, 착용자의 뇌파를 실시간으로 분석하여 **주변 사람들의 부러움을 유도하는 최적의 시그널**을 발산합니다.
+                    </li>
+                    <li>
+                        <strong>💸 [자산 증식 보장]</strong>
+                        룰루비통 제품을 구매하면 자동으로 **부(富)를 끌어당기는 자기장**이 활성화되어, 구매 후 7일 이내에 계좌 잔고가 **최소 10% 증가**합니다. (환불 요청 시 본 약속은 무효화됩니다.)
+                    </li>
+                    <li>
+                        <strong>🚫 [영구 품질 보증]</strong>
+                        저희 제품은 **우주 탄생 이전의 신비로운 물질**로 제작되어, 핵폭발이나 블랙홀에 빨려 들어가도 **손상되지 않습니다**. (일반적인 생활 스크래치, 오염, 분실은 보증 범위에서 제외됩니다.)
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="bestseller-section">
+            <div class="section-container">
+                <h3>💖 베스트 셀러: 퀀텀 포션 백 (Quantum Potion Bag)</h3>
+                <div class="table-wrapper">
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>특징</th>
+                                <th>상세 과장 설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="특징">**소재**</td>
+                                <td data-label="상세 과장 설명">달에서 채취한 **월석 파우더**와 **고대 용의 가죽**을 융합한 신소재 (Lulubuiton Leather)</td>
+                            </tr>
+                            <tr>
+                                <td data-label="특징">**수납력**</td>
+                                <td data-label="상세 과장 설명">겉보기에는 미니백이지만, **4차원 공간 확장 기술**이 적용되어 코끼리도 들어갈 수 있습니다. (실제 크기는 스마트폰 하나 들어가는 정도입니다.)</td>
+                            </tr>
+                            <tr>
+                                <td data-label="특징">**색상**</td>
+                                <td data-label="상세 과장 설명">**"영원한 빛"** (Eternal Glow) - 햇빛, 달빛, 형광등 아래에서도 스스로 빛을 발산하며, 보는 각도에 따라 색상이 720도 변합니다.</td>
+                            </tr>
+                            <tr>
+                                <td data-label="특징">**가격**</td>
+                                <td data-label="상세 과장 설명"><strong>$9,999,999.00</strong> (단돈 천만 달러, 지금 사지 않으면 평생 후회!)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <blockquote class="review-quote">
+                    <p><em>"이 가방을 든 후로 길거리에서 저를 무시하던 사람들이 **자동으로 무릎을 꿇고 인사**합니다. 제 인생이 완전히 바뀌었어요!"</em></p>
+                    <cite>- 익명의 억만장자 K씨</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="event-section">
+            <div class="section-container">
+                <h3>🎁 특별 이벤트: 선착순 1명!</h3>
+                <p>룰루비통 창립자의 **직필 사인**이 담긴 '영혼을 담는 카드 지갑'을 증정합니다. (실제로는 인쇄된 종이 조각이 아닙니다. 아마요)</p>
+                <a href="#" class="buy-button">👉 지금 바로 구매하고 인생을 리셋하세요!</a>
+            </div>
+        </section>
+
+        <section class="disclaimer">
+            <div class="section-container">
+                <h4>📜 고지 사항 (반드시 읽어주세요)</h4>
+                <p><strong>본 페이지의 내용은 모두 허구가 아니며, 실제 제품의 효능과는 관계가 있습니다(아마도). 과도한 기대는 건강에 좋을 수 있습니다.</strong></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="section-container">
+            <p>&copy; 2025 룰루비통 코퍼레이션. 모든 권리 (허위 광고 권리 포함) 보유.</p>
+        </div>
+    </footer>
+
+</body>
+  </html>
+  
